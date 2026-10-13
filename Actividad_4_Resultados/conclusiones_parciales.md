@@ -1,0 +1,7 @@
+- **BERT multilingüe**: F1 macro de validación 0.695; F1 macro de prueba 0.771; recall NEG en prueba 0.896; latencia individual p95 34.9 ms.
+- **DistilBERT multilingüe**: F1 macro de validación 0.517; F1 macro de prueba 0.536; recall NEG en prueba 0.696; latencia individual p95 5.3 ms.
+- **XLM-RoBERTa**: F1 macro de validación 0.587; F1 macro de prueba 0.609; recall NEG en prueba 0.867; latencia individual p95 63.4 ms.
+
+**Modelo elegido con validación: BERT multilingüe.** Ningún modelo cumple todos los umbrales: candidato exploratorio, requiere mejoras. En prueba obtuvo accuracy=0.820, precision macro=0.775, recall macro=0.769 y F1 macro=0.771. Cumple los umbrales de calidad en prueba.
+
+La elección equilibra calidad, detección de opiniones negativas y eficiencia según la regla previa. Revisar los errores, especialmente opiniones mixtas y la clase neutral. Si el desempeño es insuficiente, considerar revisión del etiquetado, datos del dominio y eventualmente fine-tuning con particiones independientes. Las puntuaciones de confianza no sustituyen las métricas. La muestra y el hardware limitan la generalización; se requiere validación con reseñas propias y análisis de posible solapamiento con entrenamiento antes de uso real.
